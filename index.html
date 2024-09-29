@@ -7,17 +7,162 @@
     <!-- Taiwind And Daisy -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fonts Link 1-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="shortcut icon" href="/image/Restaurant-Logo.png" type="image/x-icon">
+    <!-- font Link-1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Italianno&display=swap');
+
+        .font-title {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .font-inter {
+            font-family: "Inter", sans-serif;
+
+        }
+
+        .button1 {
+            background: radial-gradient(gold, lightpink);
+            font-weight: 700;
+            cursor: pointer;
+            padding: 15px;
+            color: #000;
+            transition: 0.004s ease-in-out;
+            border: none;
+            border-radius: 25px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .button1:hover {
+            box-shadow: 2px 2px 2px 2px rgba(255, 215, 0, 0.4);
+            border: 1px solid white;
+            color: white;
+        }
+    </style>
     <title>Food Restaurant</title>
 </head>
 
-<body>
-    <h1 class="font-Title text-5xl">hello world</h1>
+<body class="font-inter">
+    <!-- Navber Start -->
+    <nav class="sticky top-0">
+        <!-- logo and Title -->
+        <div class="navbar bg-base-100 ">
+            <div class="flex-1 w-2/6 inline-flex">
+                <img src="./image/Restaurant-Logo.png" alt="" class="w-12 h-12">
+                <a class="btn btn-ghost text-3xl font-title text-purple-400">Food Restaurant</a>
+            </div>
+            <!-- Items -->
+            <div class="hidden lg:flex w-4/6 ml-[5rem justify-center">
+                <ul class="menu menu-horizontal px-2 text-xl font-title font-bold">
+                    <li><a class="font-bold text-xl">Home</a></li>
+                    <li><a class="font-bold text-xl">Categories</a></li>
+                    <li><a class="font-bold text-xl">Food</a></li>
+                    <li><a class="font-bold text-xl">Reviews</a></li>
+                    <li><a class="font-bold text-xl">Contact</a></li>
+                </ul>
+                <div class="navbar-start hidden lg:flex ">
+                    <a
+                        class="btn font-title font-bold text-3xl text-white bg-gradient-to-r from-[#FFB6C1] to-purple-500 hover:shadow-lg hover:shadow-purple-400 hover:-translate-y-1">Login</a>
+                </div>
+            </div>
+
+            <div class="flex-none">
+                <!-- Cart  -->
+                <div class="dropdown dropdown-end hidden lg:flex">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <div class="indicator">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span class="badge badge-sm indicator-item mr-5">8</span>
+                        </div>
+                    </div>
+                    <div tabindex="0" class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
+                        <div class="card-body">
+                            <span class="text-lg font-bold">8 Items</span>
+                            <span class="text-info">total: $999</span>
+                            <div class="card-actions">
+                                <button class="btn btn-primary btn-block">View cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Profile Start-->
+                <div class="dropdown dropdown-end hidden lg:flex mr-5">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-10 w-40 p-2 shadow">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge text-purple-400">New</span>
+                            </a>
+                        </li>
+                        <li><a class="">Settings</a></li>
+                        <li><a class="">Logout</a></li>
+                    </ul>
+                </div>
+                <!-- Profile End-->
+                <!-- Cross Btn -->
+                <div class="dropdown dropdown-end lg:hidden ">
+                    <label id="hamburger-btn" class="btn btn-circle swap swap-rotate">
+                        <!-- this hidden checkbox controls the state -->
+                        <input type="checkbox" id="input-icon" />
+
+                        <!-- hamburger icon -->
+                        <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                            viewBox="0 0 512 512">
+                            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                        </svg>
+
+                        <!-- close icon -->
+                        <svg id="swap-t-on" class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32"
+                            height="32" viewBox="0 0 512 512">
+                            <polygon
+                                points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+                        </svg>
+                    </label>
+
+                    <ul tabindex="2" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+                        id="hidden-nav">
+                        <div class="navbar-center lg:flex" id="hidden-Items">
+                            <ul class="menu menu-vertical px-1 text-xl font-title font-bold flex flex-col">
+                                <li><a class="text-purple-400 font-semibold">Home</a></li>
+                                <li><a class="text-purple-400">Categories</a></li>
+                                <li><a class="text-purple-400">Food</a></li>
+                                <li><a class="text-purple-400">Reviews</a></li>
+                                <li><a class="text-purple-400">Contact</a></li>
+                            </ul>
+                            <div class="">
+                                <a
+                                    class="btn font-title font-bold text-2xl w-full bg-gradient-to-r from-[#FFB6C1] to-purple-500 hover:shadow-lg hover:shadow-purple-400 hover:-translate-y-1">Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navber Start -->
+    <!-- Body Start -->
+    <main class="min-h-screen bg-base-200">
+
+    </main>
+
+    <footer></footer>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

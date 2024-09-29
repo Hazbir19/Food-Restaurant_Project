@@ -1,2 +1,2 @@
-1. Setup => html, js , tailwind, daisy, font.✔
-2.
+1. Setup => html, js , tailwind-css[CDN], daisy[CDN], font.✔
+2. Navber => Nav-item, Logo, Cart, Profile,   

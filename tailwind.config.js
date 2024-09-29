@@ -4,9 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Title: ["Dancing Script"],
+        title: ["Dancing Script"],
+        italiano: ["Italianno", "cursive"],
         inter: ["Inter", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
