@@ -1,0 +1,2 @@
+1. Setup => html, js , tailwind, daisy, font.✔
+2.
