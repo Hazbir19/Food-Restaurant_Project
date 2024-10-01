@@ -1,4 +1,4 @@
-// Get references to the elements
+// humburger Icon dynamic
 const checkbox = document.getElementById("input-icon");
 const hiddenItems = document.getElementById("hidden-nav");
 

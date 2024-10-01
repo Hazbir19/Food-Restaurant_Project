@@ -1,2 +1,8 @@
 1. Setup => html, js , tailwind-css[CDN], daisy[CDN], font.✔
-2. Navber => Nav-item, Logo, Cart, Profile,   
+2. Navber => Nav-item, Logo, Cart, Profile.✔
+3. Hero => Hero-image, Hero-text, Hero-button.✔
+4. Explore Section.
+6. Footer Section.
+------------->[main End]<----------------
+5. food Section.
+6. Review section.
